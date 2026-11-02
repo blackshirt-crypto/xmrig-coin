@@ -1,0 +1,13 @@
+{
+    "autosave": true,
+    "cpu": true,
+    "randomx": { "1gb-pages": true },
+    "pools": [{
+        "algo": "rx/2",
+        "url": "127.0.0.1:38881",
+        "user": "YOUR_COIN_C_ADDRESS",
+        "pass": "x",
+        "rig-id": "rig1",
+        "daemon": true
+    }]
+}
