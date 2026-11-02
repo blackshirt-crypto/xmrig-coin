@@ -225,6 +225,9 @@ curl -s http://NODE_IP_HERE:38889/get_info | grep '"height"'
 | `rejected ... "Block not accepted"` | You're running **official** XMRig, not this build | Run `./xmrig --version` — it must say **6.26.0-coin** |
 | `Core is busy` | Your node is still syncing | Wait until `"synchronized": true` (Step 3) |
 | `connect error: "connection refused"` | Node isn't running, or wrong IP/port | Start `coind`; check `url` in `config.json` |
+| `connection refused` **only from another computer** | The node only listens to its own computer by default | Use the two-port setup in **Mining from a different computer** (port `38889`) |
+| `Failed to bind` / `Address already in use` (in the node) | Two nodes running on the same computer (e.g. `coind` **and** the GUI wallet in Local node mode) | Run only one node. If `coind` is running, set the GUI to **Remote node → 127.0.0.1 : 38881** |
+| No jobs / strange errors after connecting | Miner pointed at port `38880` (node-to-node port) | Miners use `38881` (same computer) or `38889` (other computers) — never `38880` |
 | `FAILED TO APPLY MSR MOD` | XMRig wasn't run with `sudo` | Use `sudo ./xmrig -c config.json` |
 | `failed to allocate RandomX dataset using 1GB pages` | Normal without root | Run with `sudo`, or ignore (regular huge pages still work) |
 
