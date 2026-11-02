@@ -59,7 +59,7 @@ RandomX_ConfigurationMoneroV2::RandomX_ConfigurationMoneroV2()
 	Tweak_V2_CFROUND = 1;
 	Tweak_V2_AES = 1;
 	Tweak_V2_PREFETCH = 1;
-	Tweak_V2_COMMITMENT = 1;
+	Tweak_V2_COMMITMENT = 0;
 }
 
 RandomX_ConfigurationWownero::RandomX_ConfigurationWownero()
